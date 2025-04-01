@@ -20,7 +20,7 @@ xml_tree.SubElement(channedl_element, 'format').text = yaml_data['format']
 xml_tree.SubElement(channedl_element, 'subtitle').text = yaml_data['subtitle']
 xml_tree.SubElement(channedl_element, 'itunes:author').text = yaml_data['author']
 xml_tree.SubElement(channedl_element, 'description').text = yaml_data['description']
-xml_tree.SubElement(channedl_element, 'itumes:image', {'href': link_prefix + yaml_data['image']})
+xml_tree.SubElement(channedl_element, 'itunes:image', {'href': link_prefix + yaml_data['image']})
 xml_tree.SubElement(channedl_element, 'language').text = yaml_data['language']
 xml_tree.SubElement(channedl_element, 'linnk').text = link_prefix
 
@@ -29,9 +29,9 @@ xml_tree.SubElement(channedl_element, 'itunes:category').text = yaml_data['categ
 for item in yaml_data['item']:
     item_element = xml_tree.SubElement(channedl_element, 'item')
     xml_tree.SubElement(item_element, 'title').text= item['title']
-    xml_tree.SubElement(item_element, 'itumes:author').text = yaml_data['author']
+    xml_tree.SubElement(item_element, 'itunes:author').text = yaml_data['author']
     xml_tree.SubElement(item_element, 'description').text = item['description']
-    xml_tree.SubElement(item_element, 'itumes:duration').text = item['title']
+    xml_tree.SubElement(item_element, 'itunes:duration').text = item['title']
     xml_tree.SubElement(item_element, 'pubdate').text = item['published']
     xml_tree.SubElement(item_element, 'title').text = item['title']
    
